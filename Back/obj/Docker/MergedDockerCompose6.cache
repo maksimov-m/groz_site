@@ -1,0 +1,58 @@
+name: dockercompose16462151099328737946
+services:
+  postgres-server-db:
+    container_name: user-db
+    environment:
+      DB_DEV_HOST: localhost
+      DB_HOST: db
+      POSTGRES_DB: usersdb
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_PASSWORD: avRK-LnF1n
+      POSTGRES_USER: SA
+    image: postgres
+    networks:
+      my-net: null
+    ports:
+    - mode: ingress
+      target: 5432
+      published: "5532"
+      protocol: tcp
+    restart: always
+  webserver:
+    build:
+      context: D:\MYFILES\Prog\C#\Hackaton\GROZ\Back
+      dockerfile: Geo_Back/Dockerfile
+    container_name: webserver
+    depends_on:
+      postgres-server-db:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webserver
+    networks:
+      my-net: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "61752"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\ravil\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\ravil\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  my-net:
+    name: dockercompose16462151099328737946_my-net
+    driver: bridge
