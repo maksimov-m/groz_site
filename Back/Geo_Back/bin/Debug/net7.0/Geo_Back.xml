@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Geo_Back</name>
+    </assembly>
+    <members>
+        <member name="T:Geo_Back.Migrations.Iden">
+            <inheritdoc />
+        </member>
+        <member name="M:Geo_Back.Migrations.Iden.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Geo_Back.Migrations.Iden.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Geo_Back.Migrations.Iden.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="F:Geo_Back.Models.UserModel.ProfileImageId">
+            <summary>
+            Будущее не трогать!!!
+            </summary>
+        </member>
+    </members>
+</doc>

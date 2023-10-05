@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content ="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>{% block title %}EasyML{% endblock %}</title>
+  {% block style %}
+  {% endblock %}
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color:#6d9eeb">
+    <div class="container">
+      <a class="navbar-brand" href="/">Образование</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          {% block menu %}
+          {% endblock %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <h1>Личный кабинет школьника</h1>
+
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h2>ФИО:</h2>
+        <p>Иванов Иван Иванович</p>
+      </div>
+      <div class="col-md-6">
+        <h2>Фото:</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT41UuRq_a-I376JXwLBArHD6UOUfO84PkuZETy8s&s" alt="Фото школьника" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h2>Достижения:</h2>
+        <ul class="list-group">
+          <li class="list-group-item">Победитель олимпиады по математике</li>
+          <li class="list-group-item">Победитель конкурса рисунков</li>
+          <li class="list-group-item">Участник школьной команды по баскетболу</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h2>Уровень:</h2>
+        <p>10 класс</p>
+        <h2>Текущий опыт:</h2>
+        <p>5000 очков</p>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <h2>Рекомендации для учебы:</h2>
+        <p>Постарайтесь уделять больше времени на подготовку к урокам и не откладывать дела на последний момент. Также рекомендуем обращаться за помощью к учителям и не стесняться задавать вопросы.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подключаем скрипты Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper" integrity="sha384-1J8P7vGQMLw1g+0Ck1CzR5QJW7uTnHxN5N9cJvFZdXbHqX8n7CQRVr9VdU3K7Z5" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

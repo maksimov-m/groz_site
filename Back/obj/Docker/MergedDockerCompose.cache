@@ -1,0 +1,18 @@
+name: dockercompose16462151099328737946
+services:
+  geo_back:
+    build:
+      context: D:\MYFILES\Prog\C#\Hackaton\GROZ\Back
+      dockerfile: Geo_Back/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: geoback
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose16462151099328737946_default
